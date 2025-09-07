@@ -27,21 +27,11 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <nav 
-        className={`w-full z-50 transition-all duration-500 ease-in-out ${
-          isScrolled 
-            ? 'bg-black shadow-lg' 
-            : 'bg-white'
-        }`}
-        style={{
-          position: window.innerWidth <= 768 ? 'sticky' : 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          width: '100%',
-          zIndex: 50
-        }}
-      >
+      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        isScrolled 
+          ? 'bg-black shadow-lg' 
+          : 'bg-white'
+      }`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
