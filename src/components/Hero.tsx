@@ -36,36 +36,55 @@ const Hero: React.FC = () => {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <section className="relative w-full min-h-[60vh] bg-white overflow-hidden pt-24 pb-16 md:pt-40 md:pb-32">
-      {/* Mobile: Heading, then video, then CTA */}
-      <div className="block md:hidden">
-        <div className="container-custom">
-          <div className="w-full bg-gradient-to-r from-white/95 to-white/0 rounded-xl">
-            <h1 className="mt-4 mb-4 font-normal text-black leading-tight text-3xl uppercase tracking-tight animate-slide-up" style={{ fontWeight: 400 }}>
-              <span
-                className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
-                style={{ minWidth: '3ch', display: 'block' }}
-              >
-                {displayed}&nbsp;
-              </span>
-              <span className="block w-full whitespace-nowrap">DON'T JUST</span>
-              <span className="block w-full whitespace-nowrap">SEE BRANDS.</span>
-              <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
-            </h1>
+    <section className="relative w-full bg-white overflow-hidden md:pt-40 md:pb-32">
+      {/* Mobile: Optimized layout for iPhone 14 (717px available height) */}
+      <div className="block md:hidden hero-mobile-container" style={{
+        height: 'calc(100vh - 80px)', // 717px available height minus navbar
+        paddingTop: '20px',
+        paddingBottom: '20px'
+      }}>
+        {/* Top: Hero text with proper breathing room - LEFT ALIGNED WITH LOGO */}
+        <div className="flex-shrink-0" style={{ 
+          paddingTop: '16px', 
+          paddingBottom: '16px',
+          paddingLeft: '2rem', // Same as container-custom padding
+          paddingRight: '2rem'
+        }}>
+          <h1 className="font-normal text-black leading-tight text-3xl uppercase tracking-tight animate-slide-up text-left" style={{ fontWeight: 400, margin: 0 }}>
+            <span
+              className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
+              style={{ minWidth: '3ch', display: 'block' }}
+            >
+              {displayed}&nbsp;
+            </span>
+            <span className="block w-full whitespace-nowrap">DON'T JUST</span>
+            <span className="block w-full whitespace-nowrap">SEE BRANDS.</span>
+            <span className="block w-full whitespace-nowrap">WE SHAPE THEM</span>
+          </h1>
+        </div>
+        
+        {/* Middle: Video - CENTERED */}
+        <div className="flex-1 flex items-center justify-center px-4" style={{ minHeight: '250px' }}>
+          <div className="w-full max-w-sm sm:max-w-md aspect-video relative">
+            <iframe
+              src={HERO_VIDEO_URL}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="STUDIOEYN"
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-lg"
+              style={{ zIndex: 1 }}
+            ></iframe>
           </div>
         </div>
-        <div className="w-full aspect-video relative mt-4">
-          <iframe
-            src={HERO_VIDEO_URL}
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            title="STUDIOEYN"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            style={{ zIndex: 1 }}
-          ></iframe>
-        </div>
-        <div className="container-custom">
+        
+        {/* Bottom: CTA button with proper breathing room - LEFT ALIGNED WITH LOGO */}
+        <div className="flex-shrink-0" style={{ 
+          paddingTop: '16px', 
+          paddingBottom: '16px',
+          paddingLeft: '2rem', // Same as container-custom padding
+          paddingRight: '2rem'
+        }}>
           <a
             href="#contact"
             className="inline-block px-8 py-4 rounded-md bg-black text-white text-base font-normal shadow hover:bg-gray-900 transition-colors duration-200 animate-slide-up animation-delay-400 uppercase"

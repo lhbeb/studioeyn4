@@ -42,6 +42,60 @@
       width: 100% !important;
       z-index: 50 !important;
     }
+    
+    /* Responsive mobile hero layout for all devices */
+    .hero-mobile-container {
+      height: calc(100vh - 80px) !important;
+      min-height: 500px !important; /* Minimum for smaller phones */
+      max-height: 800px !important; /* Maximum for larger phones */
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    
+    /* Small phones (iPhone SE, etc.) */
+    @media (max-width: 375px) {
+      .hero-mobile-container {
+        min-height: 450px !important;
+      }
+      
+      h1 {
+        font-size: 1.5rem !important; /* 24px */
+        line-height: 1.1 !important;
+      }
+      
+      .container-custom {
+        padding: 0 0.75rem;
+      }
+    }
+    
+    /* Medium phones (iPhone 14, most Android) */
+    @media (min-width: 376px) and (max-width: 428px) {
+      .hero-mobile-container {
+        min-height: 600px !important;
+      }
+      
+      h1 {
+        font-size: 1.875rem !important; /* 30px */
+        line-height: 1.1 !important;
+      }
+    }
+    
+    /* Large phones (iPhone 14 Plus, large Android) */
+    @media (min-width: 429px) and (max-width: 768px) {
+      .hero-mobile-container {
+        min-height: 700px !important;
+      }
+      
+      h1 {
+        font-size: 2.25rem !important; /* 36px */
+        line-height: 1.1 !important;
+      }
+      
+      .container-custom {
+        padding: 0 1.5rem;
+      }
+    }
   }
 
   /* Typography hierarchy */
