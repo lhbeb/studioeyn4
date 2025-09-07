@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
         </div>
         
         {/* Bottom: CTA button */}
-        <div className="container-custom flex-shrink-0 text-center">
+        <div className="container-custom flex-shrink-0">
           <a
             href="#contact"
             className="inline-block px-6 py-3 rounded-md bg-black text-white text-sm font-normal shadow hover:bg-gray-900 transition-colors duration-200 animate-slide-up animation-delay-400 uppercase"
