@@ -30,6 +30,23 @@
   
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Prevent horizontal scrolling on all elements */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure no element can cause horizontal overflow */
+  html, body, #root {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   /* Mobile navbar positioning */

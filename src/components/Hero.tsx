@@ -36,9 +36,9 @@ const Hero: React.FC = () => {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <section className="relative w-full bg-white overflow-hidden md:pt-40 md:pb-32">
+    <section className="relative w-full max-w-full bg-white overflow-hidden md:pt-40 md:pb-32">
       {/* Mobile: Optimized layout for iPhone 14 (717px available height) */}
-      <div className="block md:hidden hero-mobile-container" style={{
+      <div className="block md:hidden hero-mobile-container w-full max-w-full" style={{
         height: 'calc(100vh - 80px)', // 717px available height minus navbar
         paddingTop: '20px',
         paddingBottom: '20px'
