@@ -36,12 +36,12 @@ const Hero: React.FC = () => {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <section className="relative w-full min-h-[60vh] bg-white overflow-hidden pt-24 pb-16 md:pt-40 md:pb-32">
-      {/* Mobile: Heading, then video, then CTA */}
+    <section className="relative w-full min-h-[100vh] bg-white overflow-hidden pt-16 pb-8 md:pt-40 md:pb-32">
+      {/* Mobile: Optimized layout for viewport */}
       <div className="block md:hidden">
         <div className="container-custom">
-          <div className="w-full bg-gradient-to-r from-white/95 to-white/0 rounded-xl">
-            <h1 className="mt-8 mb-8 font-normal text-black leading-tight text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight animate-slide-up" style={{ fontWeight: 400 }}>
+          <div className="w-full">
+            <h1 className="mt-4 mb-4 font-normal text-black leading-tight text-3xl uppercase tracking-tight animate-slide-up" style={{ fontWeight: 400 }}>
               <span
                 className="inline-block text-black font-mono align-middle w-full whitespace-nowrap"
                 style={{ minWidth: '3ch', display: 'block' }}
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             </h1>
           </div>
         </div>
-        <div className="w-full aspect-video relative mt-8">
+        <div className="w-full aspect-video relative mt-4 mb-4">
           <iframe
             src={HERO_VIDEO_URL}
             frameBorder="0"
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
         <div className="container-custom">
           <a
             href="#contact"
-            className="inline-block px-8 py-4 rounded-md bg-black text-white text-base font-normal shadow hover:bg-gray-900 transition-colors duration-200 animate-slide-up animation-delay-400 uppercase"
+            className="inline-block px-6 py-3 rounded-md bg-black text-white text-sm font-normal shadow hover:bg-gray-900 transition-colors duration-200 animate-slide-up animation-delay-400 uppercase"
           >
             GET IN TOUCH
           </a>
